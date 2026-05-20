@@ -4,7 +4,11 @@ A full stack web application for searching, browsing, and saving artwork from th
 
 ## Demo
 
+![The Metropolitan Museum of Art](https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg/1280px-Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg)
+
 > **Live:** [met-artwork-explorer.vercel.app](https://met-artwork-explorer-753i37e4f-rendells-projects.vercel.app/)
+
+**Register** an account, **log in**, then try the **navbar search** (e.g. *"monet"*) or **Advanced Search** to filter by medium, location, and more. **Save favourites** and revisit past queries from your **history**.
 
 ## Learning Outcomes
 
@@ -97,44 +101,9 @@ This app was built incrementally across three development phases:
 - Metropolitan Museum of Art Collection API (public, no auth required)
 - Course notes with JWT patterns and RouteGuard examples
 
-## Project Structure
+## User API
 
-```
-met-artwork-explorer/
-├── pages/
-│   ├── _app.js
-│   ├── index.js
-│   ├── search.js
-│   ├── favourites.js
-│   ├── history.js
-│   ├── login.js
-│   ├── register.js
-│   └── artwork/
-│       ├── index.js
-│       └── [objectID].js
-├── components/
-│   ├── Layout.js
-│   ├── MainNav.js
-│   ├── ArtworkCard.js
-│   ├── ArtworkCardDetail.js
-│   └── RouteGuard.js
-├── lib/
-│   ├── authenticate.js
-│   └── userData.js
-├── store.js
-├── public/
-│   └── data/
-│       └── validObjectIDList.json
-├── styles/
-│   └── History.module.css
-├── .env.example
-├── package.json
-└── user-api/
-    ├── server.js
-    ├── package.json
-    ├── .env.example
-    └── user-service.js
-```
+The backend JWT authentication API is in a separate repository: [renv39/users-api](https://github.com/renv39/users-api)
 
 ---
 
