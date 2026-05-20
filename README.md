@@ -4,7 +4,7 @@ A full stack web application for searching, browsing, and saving artwork from th
 
 ## Demo
 
-> **Live:** [met-artwork-explorer.vercel.app](https://met-artwork-explorer.vercel.app)](https://met-artwork-explorer-753i37e4f-rendells-projects.vercel.app/)
+> **Live:** [met-artwork-explorer.vercel.app](https://met-artwork-explorer-753i37e4f-rendells-projects.vercel.app/)
 
 ## Learning Outcomes
 
