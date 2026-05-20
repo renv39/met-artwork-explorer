@@ -103,7 +103,7 @@ This app was built incrementally across three development phases:
 
 ## User API
 
-The backend JWT authentication API is in a separate repository: [renv39/users-api](https://github.com/renv39/users-api)
+The backend JWT authentication API is in a separate repository: [users-api repo](https://github.com/renv39/users-api)
 
 ---
 
