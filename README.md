@@ -6,7 +6,7 @@ A full stack web application for searching, browsing, and saving artwork from th
 
 ![The Metropolitan Museum of Art](https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg/1280px-Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg)
 
-> **Live:** [met-artwork-explorer.vercel.app](https://met-artwork-explorer-753i37e4f-rendells-projects.vercel.app/)
+> **Live:** [met-artwork-explorer.vercel.app](https://met-artwork-explorer.vercel.app/)
 
 **Register** an account, **log in**, then try the **navbar search** (e.g. *"monet"*) or **Advanced Search** to filter by medium, location, and more. **Save favourites** and revisit past queries from your **history**.
 
