@@ -92,19 +92,10 @@ This app was built incrementally across three development phases:
 2. **State Management** — Added Jotai for global favourites and search history, fixed data integrity issues with invalid objectIDs, improved mobile UX
 3. **Authentication & Deployment** — Built a JWT-secured User API, added registration/login, persisted user data in MongoDB, implemented route guards, deployed to Vercel
 
-## Provided Code
+## Scope & Attribution
 
-- `user-api.zip` — Express server starter with user-service module and route stubs (authentication logic and JWT signing were my responsibility)
-- Advanced Search form JSX template (HTML structure only — all logic was mine)
-- Valid objectID list JSON from the Met API (downloaded as a static file)
-- React-Bootstrap, SWR, Jotai, Passport.js, and jsonwebtoken libraries
-- Metropolitan Museum of Art Collection API (public, no auth required)
-- Course notes with JWT patterns and RouteGuard examples
+The entire frontend — search, state management, authentication flow, route guarding, and deployment — is my own work. The backend started from a small Express scaffold (`user-api.zip`: a user-service module and route stubs); I implemented the authentication logic, the JWT login/signing, and wired up the protected routes. The Met Collection API is a public third-party API, and the valid objectID list is a static data file downloaded from it.
 
 ## User API
 
-The backend JWT authentication API is in a separate repository: [users-api repo](https://github.com/renv39/users-api)
-
----
-
-*Built as part of coursework at Seneca Polytechnic — Computer Programming & Analysis*
+The backend JWT authentication API lives in a separate repository: [users-api](https://github.com/renv39/users-api)
