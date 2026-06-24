@@ -1,4 +1,4 @@
-import { Card, Form, Button, Alert } from "react-bootstrap";
+import { Card, Form, Button, Alert, Spinner } from "react-bootstrap";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { registerUser } from "@/lib/authenticate";
@@ -9,15 +9,19 @@ export default function Register(props) {
   const [password2, setPassword2] = useState("");
 
   const [warning, setWarning] = useState("");
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   async function handleSubmit(e) {
     e.preventDefault();
+    setWarning("");
+    setLoading(true);
     try {
       await registerUser(user, password, password2);
       router.push("/login");
     } catch (err) {
       setWarning(err.message);
+      setLoading(false);
     }
   }
 
@@ -63,8 +67,27 @@ export default function Register(props) {
           />
         </Form.Group>
         <br />
-        <Button variant="primary" className="pull-right" type="submit">
-          Register
+        <Button
+          variant="primary"
+          className="pull-right"
+          type="submit"
+          disabled={loading}
+        >
+          {loading ? (
+            <>
+              <Spinner
+                as="span"
+                animation="border"
+                size="sm"
+                role="status"
+                aria-hidden="true"
+                className="me-2"
+              />
+              Registering...
+            </>
+          ) : (
+            "Register"
+          )}
         </Button>
       </Form>
       {warning && (
