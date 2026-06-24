@@ -1,4 +1,4 @@
-import { Card, Form, Button, Alert } from "react-bootstrap";
+import { Card, Form, Button, Alert, Spinner } from "react-bootstrap";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { authenticateUser } from "@/lib/authenticate";
@@ -14,16 +14,20 @@ export default function Login(props) {
   const [password, setPassword] = useState("");
 
   const [warning, setWarning] = useState("");
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   async function handleSubmit(e) {
     e.preventDefault();
+    setWarning("");
+    setLoading(true);
     try {
       await authenticateUser(user, password);
       await updateAtoms();
       router.push("/favourites");
     } catch (err) {
       setWarning(err.message);
+      setLoading(false);
     }
   }
 
@@ -63,8 +67,27 @@ export default function Login(props) {
           />
         </Form.Group>
         <br />
-        <Button variant="primary" className="pull-right" type="submit">
-          Login
+        <Button
+          variant="primary"
+          className="pull-right"
+          type="submit"
+          disabled={loading}
+        >
+          {loading ? (
+            <>
+              <Spinner
+                as="span"
+                animation="border"
+                size="sm"
+                role="status"
+                aria-hidden="true"
+                className="me-2"
+              />
+              Logging in...
+            </>
+          ) : (
+            "Login"
+          )}
         </Button>
       </Form>
       {warning && (
